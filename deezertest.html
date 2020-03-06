@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="style2.css" type="text/css" /> -->
+    <title>Lounge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style>
+        .chat {
+            background: #000;
+            padding: 3px;
+            /* position: relative; */
+            bottom: 100%;
+            width: 100%;
+        }
+
+        form input {
+            border: 1;
+            padding: 10px;
+            width: 100%;
+            margin-right: .5%;
+        }
+
+        .chatbutton {
+            width: 100px;
+            background: rgb(9, 194, 255);
+            border: none;
+            padding: 10px;
+        }
+
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+        }
+
+        #messages li {
+            padding: 5px 10px;
+        }
+
+        #messagebox {
+            height: 300px;
+            overflow: scroll;
+        }
+
+        * {
+            background-color: #202020;
+            color: white;
+            font-family: 'Open-sans', sans-serif;
+        }
+
+        nav,
+        button {
+            color: black;
+        }
+
+        form,
+        button {
+            background-color: white;
+        }
+
+        div.container {
+            margin-bottom: 100px;
+        }
+
+        .body {
+            background-color: #202020;
+        }
+
+        #lounge {
+            font-family: 'Montserrat Subrayada', sans-serif;
+        }
+
+        #new {
+            margin-top: 5px;
+        }
+
+        #get {
+            color: #007bff;
+            margin-top: 100px;
+        }
+
+        #addMusic {
+            padding-right: 56px;
+        }
+        #playlist {
+            /* overflow: scroll; */
+        }
+    </style>
+</head>
+
+<body class="body">
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" id="lounge">Lounge</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button i class="fa fa-search" type="submit"></button>
+        </form>
+    </nav>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button i class="fa fa-arrow-left fa-2x" type="submit"></button>
+                <h1>Lounges</h1>
+                <br />
+            </div>
+            <div class="col-auto">
+                <a href="">
+                    <h3 id="get">Get playlist</h3>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 30rem; height: 30rem">
+                    <div class="card-body">
+                        <h5 class="card-title">Chat
+                            <div id="messagebox">
+                                <ul id="messages"></ul>
+                            </div>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 20rem; height: 20rem">
+                    <div class="card-body">
+                        <h5 class="card-title">Playlist goes here
+                        </h5>
+                        <div class="input-field col s12">
+                            <textarea id="addMusic" class="materialize-textarea"></textarea>
+                            <label for="addMusic"></label> <button i class="fa fa-plus fa-2x" id="submitbutton"
+                                type="submit"></button>
+                        </div>
+                        <div id="playlist"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="card text-center" id="nowPlaying">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <div class="card text-center" id="nowPlaying"></div>
+                </h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+    <script src="./deezertest.js"></script>
+
+</body>
+
+</html>

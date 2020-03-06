@@ -1,0 +1,52 @@
+* {
+    background-color: linear-gradient(180deg, rgba(92,92,92,1) 0%, rgba(110,52,150,1) 11%, rgba(98,164,177,1) 100%);
+    color: #ffffff;
+    font-family: 'Open-sans', sans-serif;
+}
+
+nav, button {
+    color: black;
+}
+
+form, button {
+    background-color: white;
+}
+
+div.container {
+    margin-bottom: 30px;
+}
+
+.body {
+    background-color: linear-gradient(180deg, rgba(92,92,92,1) 0%, rgba(110,52,150,1) 11%, rgba(98,164,177,1) 100%);
+}
+
+#browser{
+    background-color: linear-gradient(180deg, rgba(92,92,92,1) 0%, rgba(110,52,150,1) 11%, rgba(98,164,177,1) 100%);
+
+}
+
+img.img-fluid {
+    height: 200px;
+    width: 300px;
+}
+
+#lounge {
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#discover {
+    color: rgb(9, 194, 255);
+}
+
+#new {
+    margin-top: 5px;
+}
+
+#get {
+    color: rgb(9, 194, 255);
+    margin-top: 50px;
+}
+
+#nowPlaying {
+    background-color: #202020;
+}
