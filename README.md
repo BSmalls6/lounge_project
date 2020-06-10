@@ -9,3 +9,5 @@ Technologies used:
   
   Structure:
     Lounge uses a basic MVC structure, with a server.js file starting the application and calling routes files for API calls and updates, and for front end presentation
+    
+    Link to deployed application: https://uwbootproject2.herokuapp.com/
