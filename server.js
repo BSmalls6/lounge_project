@@ -19,51 +19,51 @@ require("./routes/HTML")(app);
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+    app.listen(PORT, function() {
+        console.log("App listening on PORT " + PORT);
+    });
 });
 
-
-app.get('/', function (req, res) {
+// sends users to different pre-built pages
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/kpop.html');
 });
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/rock.html');
 });
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/classical.html');
 });
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/edm.html');
 });
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/jazz.html');
 });
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/hiphop.html');
 });
 
 
-io.on('connection', function (socket) {
+io.on('connection', function(socket) {
     console.log('a user connected');
-    socket.on('disconnect', function () {
+    socket.on('disconnect', function() {
         console.log('user disconnected');
     });
 });
 
-io.on('connection', function (socket) {
-    socket.on('chat message', function (msg) {
+io.on('connection', function(socket) {
+    socket.on('chat message', function(msg) {
         io.emit('chat message', msg);
     });
 });
 
 
-http.listen(3000, function () {
+http.listen(3000, function() {
     console.log('listening on *:3000');
 });
