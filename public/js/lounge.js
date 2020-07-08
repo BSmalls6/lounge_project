@@ -1,12 +1,11 @@
-
 //CLICK HANDLER
-$("#submitbutton").on("click", function (event) {
-    event.preventDefault();
-    var searchVal = $("#addMusic").val();
-    console.log(searchVal);
-    getSong(searchVal);
-})
-//GET SONG DATA USING SEARCH VARIABLE
+$("#submitbutton").on("click", function(event) {
+        event.preventDefault();
+        var searchVal = $("#addMusic").val();
+        console.log(searchVal);
+        getSong(searchVal);
+    })
+    //GET SONG DATA USING SEARCH VARIABLE
 function getSong(searchVal) {
 
     var queryParams = searchVal;
@@ -16,10 +15,27 @@ function getSong(searchVal) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response);
         console.log(response.data[0].album.id);
-        
+
+        var con = mysql.createConnection({
+            host: "localhost",
+            user: "Bsmalls6",
+            password: "password",
+            database: "loungedb"
+        });
+
+        con.connect(function(err) {
+            if (err) throw err;
+            console.log("Connected!");
+            var sql = "INSERT INTO customers (song_id) VALUES ('response.data[0].album.id')";
+            con.query(sql, function(err, result) {
+                if (err) throw err;
+                console.log("1 record inserted");
+            });
+        });
+
         //GET THE ALBUM ID FROM THE API CALL
         var id = response.data[0].album.id;
 
