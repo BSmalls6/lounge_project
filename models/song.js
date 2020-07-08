@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
     var Song = sequelize.define("song", {
         title: {
             type: DataTypes.STRING,
@@ -8,26 +8,26 @@ module.exports = function (sequelize, DataTypes) {
             },
         },
 
-            source: {
-                type: DataTypes.TEXT,
-                allowNull: false
-            },
-
-            
-
-            vote: {
-                type: DataTypes.INTEGER,
-            },
+        source: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
 
 
 
-          
+        vote: {
+            type: DataTypes.INTEGER,
+        },
+
+
+
+
 
 
     });
 
     Song.associate = (models) => {
-        
+
         Song.belongsTo(models.user);
         Song.belongsTo(models.lounge, { through: models.playlist });
 

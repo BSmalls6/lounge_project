@@ -1,18 +1,19 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
     var Lounge = sequelize.define("lounge", {
         name: DataTypes.STRING,
-        // user_id: {
-        //     type: DataTypes.STRING,
-        //     references: {
-        //         model: 'user',
-        //         key: 'id'
-        //     }
-    
-        // playlist_id:{
-        //     type: DataTypes.INT,
-        //     references: "playlist",
-        //     referencesKey:'id'
-        // }
+        user_id: {
+            type: DataTypes.STRING,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        },
+
+        playlist_id: {
+            type: DataTypes.INT,
+            references: "playlist",
+            referencesKey: 'id'
+        }
 
     });
 
