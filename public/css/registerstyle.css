@@ -21,6 +21,13 @@ body {
     background-color: hsl(257, 40%, 49%);
 }
 
+#header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    color: whitesmoke;
+    justify-content: center;
+}
+
 .form {
     font-family: 'Poppins', sans-serif;
     font-size: x-large;
@@ -31,6 +38,7 @@ body {
     margin-right: 9%;
     margin-top: 15%;
     padding: 10px;
+    background-color: rgba(232, 232, 232, .5);
 }
 
 .content {
@@ -38,7 +46,6 @@ body {
     width: 45%;
     float: right;
     margin-top: 15%;
-    background-color: rgba(232, 232, 232, .5);
     padding: 10px;
     /* padding: 5% */
 }
