@@ -13,7 +13,7 @@ p {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../images/bg-intro-desktop.png");
+    background-image: url("../images/registerimages/bg-intro-desktop.png");
     height: 100%;
     background-position: center;
     background-repeat: repeat;
@@ -105,7 +105,7 @@ footer {
         height: 100%;
     }
     body {
-        background-image: url("../../images/bg-mobile.svg");
+        background-image: url("../images/registerimages/bg-intro-mobile.png");
     }
     div.content {
         width: 100%;
