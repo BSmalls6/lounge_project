@@ -7,30 +7,44 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="../../css/registerstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 
-    <title>Register page</title>
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-        
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
+
     </style>
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="col-6 words">
+            <p>Register using your Spotify account to access custom lounges and more!</p>
+        </div>
+        <div class="col-6 form">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
 
-    Register using your Spotify account to access custom lounges and more
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
+
+    </div>
     <footer>
         <p class="attribution">
-            Created by <a href="https://brennan-portfolio-2020.herokuapp.com/" target="_blank">Brennan</a>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
         </p>
     </footer>
 </body>
