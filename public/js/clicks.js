@@ -1,3 +1,4 @@
+// these are practice routes using local host
 $("#kpop").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
