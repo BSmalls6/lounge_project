@@ -49,7 +49,7 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/hiphop.html');
 });
 
-
+// creates the socket.io connection for the chatbox
 io.on('connection', function(socket) {
     console.log('a user connected');
     socket.on('disconnect', function() {
