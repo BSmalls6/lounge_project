@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("user", {
         // Giving the Author model a name of type STRING
+        // user is one of 3 main tables that stores data
         username: DataTypes.STRING,
         password: DataTypes.STRING,
         active: DataTypes.BOOLEAN
